@@ -29,11 +29,35 @@
             <canvas id="output" width="640" height="480"></canvas>
         </div>
         <div id="scene-container"></div>
+        <div id="debug-panel" class="hidden">
+            <h3>Debug Panel <button id="close-debug">X</button></h3>
+            <div class="debug-tabs">
+                <button class="tab-button active" data-tab="pose">Pose Data</button>
+                <button class="tab-button" data-tab="scene">Scene Info</button>
+                <button class="tab-button" data-tab="network">Network</button>
+                <button class="tab-button" data-tab="performance">Performance</button>
+            </div>
+            <div class="tab-content active" id="pose-tab">
+                <pre id="pose-data">No pose data available</pre>
+            </div>
+            <div class="tab-content" id="scene-tab">
+                <div id="scene-stats"></div>
+            </div>
+            <div class="tab-content" id="network-tab">
+                <div id="network-stats"></div>
+            </div>
+            <div class="tab-content" id="performance-tab">
+                <div id="fps-display">FPS: 0</div>
+                <div id="memory-stats">Memory: N/A</div>
+                <div id="timestamp-display">Last frame: N/A</div>
+            </div>
+        </div>
+        <button id="debug-toggle">Debug</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@4.11.0/dist/tf-core.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl@4.11.0/dist/tf-backend-webgl.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@2.1.0/dist/pose-detection.js"></script>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="js/main.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>

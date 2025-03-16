@@ -1,0 +1,23 @@
+{
+  "name": "avatar-motion-tracking",
+  "version": "1.0.0",
+  "description": "Multiplayer 3D Avatar Motion Tracking App",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": ["js"],
+    "moduleDirectories": ["node_modules", "js"],
+    "testMatch": ["**/*.test.js"],
+    "transform": {},
+    "setupFiles": ["./jest.setup.js"]
+  }
+}
+
